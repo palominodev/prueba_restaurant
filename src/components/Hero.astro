@@ -1,17 +1,20 @@
 ---
-
+import { Image } from "astro:assets";
+import PlatoCeviche from "../assets/ceviche.png";
 ---
 
-<section>
+<section class="flex justify-between h-[calc(100vh-4rem)] items-center">
 	<div>
-		<h1>Sabores Auténticos de la Costa Peruana</h1>
-		<p>Menú diario con ingredientes frescos y delivery en 30 minutos</p>
-		<div>
-			<a href="/menu">Ver Menú</a>
-			<a href="/about">Reservar Mesa</a>
+		<div class="mb-8">
+			<h1 class="text-[56px] leading-[66px] font-bold">Sabores Auténticos de <br>la Costa Peruana</h1>
+			<p class="text-lg">Menú diario con ingredientes frescos y delivery en 30 minutos</p>
+		</div>
+		<div class="flex gap-4">
+			<a class="inline-block px-4 py-2 rounded-full bg-amber-500 font-bold" href="/menu">Ver Menú</a>
+			<a class="inline-block px-4 py-2 rounded-full border font-bold" href="/about">Reservar Mesa</a>
 		</div>
 	</div>
 	<div>
-		<img src="/hero.jpg" alt="Plato de ceviche con limón y ají amarillo" />
+		<Image src={PlatoCeviche} alt="Ceviche" />
 	</div>
 </section>
