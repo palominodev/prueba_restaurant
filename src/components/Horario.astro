@@ -1,80 +1,75 @@
 ---
-
 ---
 
-<article class="border p-4 rounded-2xl bg-white shadow-md text-black">
-	<div>
-		<h5 class="text-2xl font-bold uppercase">Nuestro horario</h5>
-		<p class="text-lg">Estamos disponibles todos los días</p>
+<article class="border p-4 md:p-6 rounded-2xl bg-white shadow-md text-black max-w-3xl mx-auto my-8">
+	<div class="mb-6 text-center md:text-left">
+		<h5 class="text-xl md:text-2xl font-bold uppercase mb-2">Nuestro horario</h5>
+		<p class="text-base md:text-lg">Estamos disponibles todos los días</p>
 	</div>
-	<aside class="bg-amber-500 text-white p-4 rounded-lg text-center">
-		<p>Abierto de Lunes a Domingo</p>
-		<p class="font-bold text-lg">De 11:00 am a 12:00 pm</p>
+	
+	<aside class="bg-amber-500 text-white p-4 rounded-lg text-center mb-6">
+		<p class="mb-1">Abierto de Lunes a Domingo</p>
+		<p class="font-bold text-base md:text-lg">De 11:00 am a 12:00 pm</p>
 	</aside>
-	<ul>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Lunes</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Martes</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Miércoles</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Jueves</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Viernes</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Sábado</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		<li class="flex justify-between my-6">
-			<div>
-				<p>Domingo</p>
-			</div>
-			<div class="flex gap-2">
-				<p>11:00 am - 12:00 pm</p>
-				<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold">Abierto</span>
-			</div>
-		</li>
-		
+	
+	<!-- Versión móvil compacta (visible solo en pantallas pequeñas) -->
+	<div class="block md:hidden mb-4 text-center bg-gray-100 p-3 rounded-lg">
+		<p class="font-medium">Todos los días</p>
+		<p class="font-bold text-lg mt-1">11:00 am - 12:00 pm</p>
+		<span class="text-lime-600 inline-block border border-lime-600 px-2 py-0.5 rounded-full font-bold mt-2">Abierto</span>
+	</div>
+	
+	<!-- Lista detallada (colapsada en móvil, expandida en escritorio) -->
+	<details class="md:hidden mb-4">
+		<summary class="cursor-pointer font-medium text-center py-2 bg-gray-200 rounded-lg">
+			Ver horario detallado
+		</summary>
+		<ul class="mt-4">
+			{['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map(dia => (
+				<li class="flex flex-col sm:flex-row sm:justify-between py-3 border-b border-gray-200 last:border-0">
+					<div class="text-center sm:text-left mb-2 sm:mb-0">
+						<p class="font-medium">{dia}</p>
+					</div>
+					<div class="flex flex-col sm:flex-row items-center gap-2">
+						<p>11:00 am - 12:00 pm</p>
+						<span class="text-lime-600 inline-block border border-lime-600 px-2 rounded-full font-bold text-sm">Abierto</span>
+					</div>
+				</li>
+			))}
+		</ul>
+	</details>
+	
+	<!-- Versión desktop (visible solo en pantallas medianas y grandes) -->
+	<ul class="hidden md:block">
+		{['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'].map(dia => (
+			<li class="flex justify-between items-center py-4 border-b border-gray-100 last:border-0">
+				<div>
+					<p class="font-medium">{dia}</p>
+				</div>
+				<div class="flex items-center gap-3">
+					<p>11:00 am - 12:00 pm</p>
+					<span class="text-lime-600 inline-block border border-lime-600 px-2 py-0.5 rounded-full font-bold text-sm whitespace-nowrap">Abierto</span>
+				</div>
+			</li>
+		))}
 	</ul>
 </article>
+
+<style>
+	/* Animación suave para el desplegable en móvil */
+	details[open] summary ~ * {
+		animation: sweep 0.3s ease-in-out;
+	}
+
+	@keyframes sweep {
+		0%    {opacity: 0; transform: translateY(-10px)}
+		100%  {opacity: 1; transform: translateY(0)}
+	}
+	
+	/* Ajuste adicional para garantizar responsividad */
+	@media (max-width: 640px) {
+		li {
+			padding: 0.75rem 0;
+		}
+	}
+</style>

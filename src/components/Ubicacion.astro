@@ -1,13 +1,43 @@
 ---
 import GoogleMaps from "./GoogleMaps.astro";
-
-
 ---
 
-<section>
-	<h2>Nuestra Ubicación</h2>
-	<p>Av. Principal 123, Ciudad</p>
+<section class="ubicacion-container mx-auto p-4 md:p-6 lg:p-8 max-w-6xl">
+	<div class="text-center mb-6">
+		<h2 class="text-2xl md:text-3xl font-bold mb-2">Nuestra Ubicación</h2>
+		<p class="text-lg mb-4">Av. Principal 123, Ciudad</p>
+	</div>
 
-	<GoogleMaps />
-	<a class="font-bold p-2 px-4 text-white bg-black rounded-full" href="https://www.google.com/maps/dir//Restaurant+El+Buen+Sabor,+Centro+Comercial+San+Pedro,+Int.+B151,+Piso+2,+Av.+San+Mart%C3%ADn+750,+Chorrillos+15058/@-12.1960792,-77.0003546,15z/data=!3m1!5s0x9105b995ef426707:0x88312266fabb3159!4m18!1m8!3m7!1s0x9105b995db9e29f7:0xa2b23a21713dfb88!2sRestaurant+El+Buen+Sabor!8m2!3d-12.1960792!4d-76.9823302!15sCg1lbCBidWVuIHNhYm9yWg8iDWVsIGJ1ZW4gc2Fib3KSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11fcv7ldt4!4m8!1m0!1m5!1m1!1s0x9105b995db9e29f7:0xa2b23a21713dfb88!2m2!1d-76.9823302!2d-12.1960792!3e3?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D">Cómo llegar con Google Maps</a>
+	<div class="map-container w-full h-64 md:h-96 mb-4 overflow-hidden rounded-lg shadow-md">
+		<GoogleMaps />
+	</div>
+
+	<div class="text-center">
+		<a 
+			class="inline-block font-bold p-2 px-4 md:px-6 text-white bg-black hover:bg-gray-800 transition-colors duration-300 rounded-full text-sm md:text-base" 
+			href="https://www.google.com/maps/dir//Restaurant+El+Buen+Sabor,+Centro+Comercial+San+Pedro,+Int.+B151,+Piso+2,+Av.+San+Mart%C3%ADn+750,+Chorrillos+15058/@-12.1960792,-77.0003546,15z/data=!3m1!5s0x9105b995ef426707:0x88312266fabb3159!4m18!1m8!3m7!1s0x9105b995db9e29f7:0xa2b23a21713dfb88!2sRestaurant+El+Buen+Sabor!8m2!3d-12.1960792!4d-76.9823302!15sCg1lbCBidWVuIHNhYm9yWg8iDWVsIGJ1ZW4gc2Fib3KSAQpyZXN0YXVyYW504AEA!16s%2Fg%2F11fcv7ldt4!4m8!1m0!1m5!1m1!1s0x9105b995db9e29f7:0xa2b23a21713dfb88!2m2!1d-76.9823302!2d-12.1960792!3e3?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Cómo llegar con Google Maps
+		</a>
+	</div>
 </section>
+
+<style>
+	.ubicacion-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.map-container {
+		border-radius: 0.5rem;
+	}
+
+	@media (max-width: 640px) {
+		.map-container {
+			border-radius: 0.25rem;
+		}
+	}
+</style>

@@ -1,18 +1,13 @@
 ---
-const {name, role, image} = Astro.props
+const { name, role, image } = Astro.props;
 ---
 
-<article class="border rounded-xl overflow-hidden shadow-lg">
+<article class="border rounded-xl overflow-hidden shadow-lg max-w-xs mx-auto">
   <figure>
-    <img width="250" src={image} alt={`foto de ${name}`} />
+    <img class="w-full h-auto" src={image} alt={`foto de ${name}`} />
   </figure>
-  <figcaption class="py-4">
-    <h4 class="text-2xl font-bold text-center">{name}</h4>
-    <p class="text-lg text-center">{role}</p>
-    <!-- <div>
-      <a href="https://twitter.com/johncarter" target="_blank">Twitter</a>
-      <a href="https://instagram.com/johncarter" target="_blank">Instagram</a>
-      <a href="https://linkedin.com/johncarter" target="_blank">Linkedin</a>
-    </div> -->
+  <figcaption class="py-4 px-2">
+    <h4 class="text-xl md:text-2xl font-bold text-center">{name}</h4>
+    <p class="text-base md:text-lg text-center">{role}</p>
   </figcaption>
 </article>
