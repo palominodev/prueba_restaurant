@@ -1,21 +1,40 @@
 ---
 import PersonalCard from "./PersonalCard.astro";
 
+const personal = [
+  {
+    name: "Juan Pérez",
+    role: "Chef Ejecutivo",
+    image: "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg",
+  },
+  {
+    name: "María González",
+    role: "Chef Pastelera",
+    image: "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg",
+  },
+  {
+    name: "Carlos Rodríguez",
+    role: "Chef de Cocina",
+    image: "https://static.vecteezy.com/system/resources/previews/009/292/244/non_2x/default-avatar-icon-of-social-media-user-vector.jpg",
+  },
+]
 
 ---
 
 <section>
   <div>
-    <h2>Nosotros</h2>
-    <p>
+    <h2 class="text-4xl uppercase font-bold text-center">Nosotros</h2>
+    <p class="text-lg w-3/6 mx-auto text-center mb-8">
       Desde 2010, en Culinary Delights funcionamos tradición e innovación para
       crear experiencias únicas. Nuestro equipo de chefs apasionados se dedica a
       seleccionar los integrantes mas frescos y de alta calidad.
     </p>
   </div>
-  <div>
-	<PersonalCard/>
-	<PersonalCard/>
-	<PersonalCard/>
+  <div class="flex justify-center gap-4 flex-wrap">
+    {
+      personal.map((person) => (
+        <PersonalCard name={person.name} role={person.role} image={person.image} />
+      ))
+    }
   </div>
 </section>
