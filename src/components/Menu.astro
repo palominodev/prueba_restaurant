@@ -1,36 +1,22 @@
 ---
-import PlatoCard from "./PlatoCard.astro";
-
-
+import { ListMenu } from "./react/ListMenu";
 ---
 
 <section>
-	<div>
-		<h2>Menu de la casa</h2>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi numquam dicta voluptate error atque saepe magni molestiae soluta temporibus non.</p>
-	</div>
-
-	<div>
-		<ul>
-			<li>
-				<h3>Entradas</h3>
-			</li>
-			<li>
-				<h3>Platos principales</h3>
-			</li>
-			<li>
-				<h3>Postres</h3>
-			</li>
-			<li>
-				<h3>Bebidas</h3>
-			</li>
-		</ul>
-	</div>
-	<section>
-		<PlatoCard/>
-		<PlatoCard/>
-		<PlatoCard/>
-		<PlatoCard/>
-	</section>
-	<button>Descargar Menú</button>
+  <div>
+    <h2 class="text-2xl font-bold uppercase text-center">Menu de la casa</h2>
+    <p class="text-lg w-3/6 text-center mx-auto mb-8">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi numquam
+      dicta voluptate error atque saepe magni molestiae soluta temporibus non.
+    </p>
+  </div>
+  <ListMenu client:visible />
+  <!-- componente para descargar un pdf localmente -->
+  <div class="flex justify-center">
+    <a
+      class="my-8 inline-block px-4 py-2 rounded-full bg-amber-500 font-bold"
+      href="/menu.pdf"
+      target="_blank"
+      rel="noopener noreferrer">Descargar Menú</a>
+  </div>
 </section>
