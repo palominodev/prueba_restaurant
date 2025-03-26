@@ -25,37 +25,117 @@ export const ListMenu = () => {
     {
       category: "entradas",
       items: [
-        { name: "Ceviche", description: "Pescado fresco con limón", price: 15, img: CevicheIMG },
-        { name: "Tiradito", description: "Pescado fresco con limón", price: 12, img: TiraditoIMG },
-        { name: "Causa", description: "Papa amarilla con ají", price: 10, img: CausaIMG },
-        { name: "Anticucho", description: "Corazón de res", price: 8, img:AnticuchoIMG},
+        {
+          name: "Ceviche",
+          description: "Pescado fresco con limón",
+          price: 15,
+          img: CevicheIMG,
+        },
+        {
+          name: "Tiradito",
+          description: "Pescado fresco con limón",
+          price: 12,
+          img: TiraditoIMG,
+        },
+        {
+          name: "Causa",
+          description: "Papa amarilla con ají",
+          price: 10,
+          img: CausaIMG,
+        },
+        {
+          name: "Anticucho",
+          description: "Corazón de res",
+          price: 8,
+          img: AnticuchoIMG,
+        },
       ],
     },
     {
       category: "platos principales",
       items: [
-        { name: "Lomo saltado", description: "Carne de res con verduras", price: 20, img: LomoSaltadoIMG },
-        { name: "Aji de gallina", description: "Gallina con ají amarillo", price: 18, img: AjiGallinaIMG },
-        { name: "Seco con frejoles", description: "Carne de res con frejoles", price: 15, img: SecoFrejolesIMG },
-        { name: "Arroz con pollo", description: "Pollo con arroz", price: 12, img: ArrozPolloIMG },
+        {
+          name: "Lomo saltado",
+          description: "Carne de res con verduras",
+          price: 20,
+          img: LomoSaltadoIMG,
+        },
+        {
+          name: "Aji de gallina",
+          description: "Gallina con ají amarillo",
+          price: 18,
+          img: AjiGallinaIMG,
+        },
+        {
+          name: "Seco con frejoles",
+          description: "Carne de res con frejoles",
+          price: 15,
+          img: SecoFrejolesIMG,
+        },
+        {
+          name: "Arroz con pollo",
+          description: "Pollo con arroz",
+          price: 12,
+          img: ArrozPolloIMG,
+        },
       ],
     },
     {
       category: "postres",
       items: [
-        { name: "Suspiro a la limeña", description: "Dulce de leche con merengue", price: 8, img: SuspiroLimena },
-        { name: "Mazamorra morada", description: "Maíz morado con frutas", price: 6, img: MazamorraMorada },
-        { name: "Arroz con leche", description: "Arroz con leche", price: 5, img: ArrozLeche },
-        { name: "Turrón de doña Pepa", description: "Dulce de harina con miel", price: 4, img: TurronPepa },
+        {
+          name: "Suspiro a la limeña",
+          description: "Dulce de leche con merengue",
+          price: 8,
+          img: SuspiroLimena,
+        },
+        {
+          name: "Mazamorra morada",
+          description: "Maíz morado con frutas",
+          price: 6,
+          img: MazamorraMorada,
+        },
+        {
+          name: "Arroz con leche",
+          description: "Arroz con leche",
+          price: 5,
+          img: ArrozLeche,
+        },
+        {
+          name: "Turrón de doña Pepa",
+          description: "Dulce de harina con miel",
+          price: 4,
+          img: TurronPepa,
+        },
       ],
     },
     {
       category: "bebidas",
       items: [
-        { name: "Chicha morada", description: "Maíz morado", price: 4, img: ChichaMorada },
-        { name: "Inka Kola", description: "Gaseosa de sabor", price: 3, img: InkaKola },
-        { name: "Pisco sour", description: "Pisco con limón", price: 6, img: PiscoSour },
-        { name: "Chilcano", description: "Pisco con ginger ale", price: 7, img: Chilcano },
+        {
+          name: "Chicha morada",
+          description: "Maíz morado",
+          price: 4,
+          img: ChichaMorada,
+        },
+        {
+          name: "Inka Kola",
+          description: "Gaseosa de sabor",
+          price: 3,
+          img: InkaKola,
+        },
+        {
+          name: "Pisco sour",
+          description: "Pisco con limón",
+          price: 6,
+          img: PiscoSour,
+        },
+        {
+          name: "Chilcano",
+          description: "Pisco con ginger ale",
+          price: 7,
+          img: Chilcano,
+        },
       ],
     },
   ];
